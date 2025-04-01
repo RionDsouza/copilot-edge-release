@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <title>GitHub Copilot Edge Release</title>
   <meta name="description" content="GitHub and OpenAI introduce a lightweight AI coding assistant for offline devices.">
   <meta property="og:title" content="GitHub Copilot Edge Release: AI-Powered Coding for Offline Devices" />
@@ -9,36 +9,23 @@
   <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/en/thumb/a/aa/Microsoft_Copilot_Icon.svg/1200px-Microsoft_Copilot_Icon.svg.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://riondsouza.github.io/copilot-edge-release/" />
-  <meta http-equiv="refresh" content="2;url=https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      margin: 4rem;
-    }
-    h1 {
-      color: #1e2a38;
-    }
-    p {
-      max-width: 600px;
-      line-height: 1.6;
-    }
-    .loading {
-      color: #777;
-      font-style: italic;
-      margin-top: 1rem;
-    }
-  </style>
+
+  <script>
+    // Only redirect real users, not bots
+    window.onload = function () {
+      // Basic bot detection — don't redirect if the user agent is a bot/crawler
+      const ua = navigator.userAgent.toLowerCase();
+      const isBot = /bot|crawl|slack|discord|teams|preview|facebook|twitter|meta|whatsapp/.test(ua);
+      if (!isBot) {
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      }
+    };
+  </script>
 </head>
 <body>
-  <h1>OpenAI and GitHub Launch Lightweight Copilot for Edge Devices</h1>
-  <p>
-    In a surprising move today, OpenAI and GitHub announced a collaboration that could fundamentally change the developer experience for coding on edge devices.
-  </p>
-  <p>
-    The new "Copilot Edge" is a trimmed-down AI assistant that can function offline with limited latency, aimed at supporting developers in remote or low-bandwidth environments.
-  </p>
-  <p class="loading">
-    Loading demo...
-  </p>
+  <!-- Invisible fallback content for bots -->
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+  </noscript>
 </body>
 </html>
